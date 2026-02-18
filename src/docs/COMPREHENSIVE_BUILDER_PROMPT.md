@@ -398,22 +398,22 @@ const componentRegistry: Record<string, ComponentDefinition> = {
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│  Top Toolbar                                                 │
-│  [File] [Edit] [View] [Insert] ... [Zoom: 100%] [Device]   │
+│  Top Toolbar                                                │
+│  [File] [Edit] [View] [Insert] ... [Zoom: 100%] [Device]    │
 ├──────┬────────────────────────────────────────────┬─────────┤
 │      │                                            │         │
 │ Com- │                                            │ Props   │
-│ po-  │         VirtualWindow Canvas              │ Panel   │
+│ po-  │          VirtualWindow Canvas              │ Panel   │
 │ nents│                                            │         │
 │ Panel│                                            │         │
 │      │                                            │         │
 ├──────┴────────────────────────────────────────────┴─────────┤
 │  Layers/Hierarchy Panel                                     │
 │  [Expand All] [Collapse All]                                │
-│  └─ Page                                                     │
-│     ├─ Header                                                │
-│     │  └─ Logo                                               │
-│     └─ Hero                                                  │
+│  └─ Page                                                    │
+│     ├─ Header                                               │
+│     │  └─ Logo                                              │
+│     └─ Hero                                                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
