@@ -48,7 +48,7 @@ This is a **complex, multi-phase project** that requires careful planning, syste
 
 ```json
 {
-  "framework": "React 18+",
+  "framework": "React 19+",
   "language": "TypeScript (strict mode)",
   "buildTool": "Vite",
   "runtime": "Browser only (web application)"
