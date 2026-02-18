@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useRef, type FormEvent } from "react";
+import { useRef, type SubmitEvent } from "react";
 
 export function APITester() {
   const responseInputRef = useRef<HTMLTextAreaElement>(null);
 
-  const testEndpoint = async (e: FormEvent<HTMLFormElement>) => {
+  const testEndpoint = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -33,7 +39,7 @@ export function APITester() {
           Method
         </Label>
         <Select name="method" defaultValue="GET">
-          <SelectTrigger className="w-[100px]" id="method">
+          <SelectTrigger className="w-25" id="method">
             <SelectValue placeholder="Method" />
           </SelectTrigger>
           <SelectContent align="start">
@@ -44,7 +50,13 @@ export function APITester() {
         <Label htmlFor="endpoint" className="sr-only">
           Endpoint
         </Label>
-        <Input id="endpoint" type="text" name="endpoint" defaultValue="/api/hello" placeholder="/api/hello" />
+        <Input
+          id="endpoint"
+          type="text"
+          name="endpoint"
+          defaultValue="/api/hello"
+          placeholder="/api/hello"
+        />
         <Button type="submit" variant="secondary">
           Send
         </Button>
@@ -57,7 +69,7 @@ export function APITester() {
         id="response"
         readOnly
         placeholder="Response will appear here..."
-        className="min-h-[140px] font-mono resize-y"
+        className="min-h-35 font-mono resize-y"
       />
     </div>
   );
